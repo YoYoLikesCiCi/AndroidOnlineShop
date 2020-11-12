@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">京东</string>
+    <string name="message">显示名字</string>
+    <string name="message1">首页</string>
+    <string name="message2">分类</string>
+    <string name="message3">发现</string>
+    <string name="message4">购物车</string>
+    <string name="message5">个人中心</string>
+
+    <string name="phone_5G">华为5G手机</string>
+    <string name="milk">纯牛奶</string>
+    <string name="AmericaTravel">美国旅行</string>
+    <string name="xiao_long_xia">小龙虾</string>
+    <string name="charger">充电宝</string>
+    <string name="find">搜索</string>
+</resources>
