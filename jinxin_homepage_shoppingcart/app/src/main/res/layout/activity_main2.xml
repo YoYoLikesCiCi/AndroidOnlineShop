@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/find"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_view_phone"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/phone" />
+
+                <TextView
+                    android:id="@+id/text_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_5G"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_view_milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/milk" />
+
+                <TextView
+                    android:id="@+id/text_milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/milk"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_view_AmTravel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/the_america_travel" />
+
+                <TextView
+                    android:id="@+id/text_AmTravel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AmericaTravel"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_view_xiao_long_xia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xiao_long_xia" />
+
+                <TextView
+                    android:id="@+id/text_xiao_long_xia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xiao_long_xia"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_view_charger"
+                    android:layout_width="102dp"
+                    android:layout_height="89dp"
+                    android:src="@drawable/charger" />
+
+                <TextView
+                    android:id="@+id/text_charger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charger"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/jj"
+                    android:layout_width="102dp"
+                    android:layout_height="89dp"
+                    android:src="@drawable/charger" />
+
+                <TextView
+                    android:id="@+id/ww"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charger"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/jk"
+                    android:layout_width="102dp"
+                    android:layout_height="89dp"
+                    android:src="@drawable/charger" />
+
+                <TextView
+                    android:id="@+id/tt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charger"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+<!--        <FrameLayout-->
+<!--            android:id="@+id/frame1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1">-->
+
+<!--        </FrameLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/rg_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/home_bottom_parent_bg">
+
+                <RadioButton
+                    android:id="@+id/rb_home"
+                    style="@style/MainButtonStyle"
+                    android:drawableTop="@drawable/home_button_text_selector"
+                    android:text="@string/message1"
+                    android:textColor="#00BCD4"
+                   />
+
+                <RadioButton
+                    android:id="@+id/rb_type"
+                    style="@style/MainButtonStyle"
+                    android:drawableTop="@drawable/type_button_text_selector"
+                    android:text="@string/message2"
+                    android:textColor="#00BCD4"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_community"
+                    style="@style/MainButtonStyle"
+                    android:drawableTop="@drawable/community_button_text_selector"
+                    android:text="@string/message3"
+                    android:textColor="#00BCD4"
+                 />
+
+                <RadioButton
+                    android:id="@+id/rb_cart"
+                    style="@style/MainButtonStyle"
+                    android:drawableTop="@drawable/cart_button_text_selector"
+                    android:text="@string/message4"
+                    android:textColor="#00BCD4"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_user"
+                    style="@style/MainButtonStyle"
+                    android:drawableTop="@drawable/user_button_text_selector"
+                    android:text="@string/message5"
+                    android:textColor="#00BCD4"
+                    android:textColorHighlight="#FF9800"
+                    />
+
+            </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>
+
