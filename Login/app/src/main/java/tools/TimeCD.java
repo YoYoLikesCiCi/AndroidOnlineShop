@@ -3,15 +3,28 @@ package tools;
 import android.os.CountDownTimer;
 
 public class TimeCD extends CountDownTimer {
-    /**
-     * @param millisInFuture    The number of millis in the future from the call
-     *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
-     *                          is called.
-     * @param countDownInterval The interval along the way to receive
-     *                          {@link #onTick(long)} callbacks.
-     */
+    //倒计时器
+    public enum TimeCondition{
+        stop,
+        running
+    };//计时器的两种状态
+    private TimeCondition timeCondition;//计时器状态
+
     public TimeCD(long millisInFuture, long countDownInterval) {
         super(millisInFuture, countDownInterval);
+        timeCondition = TimeCondition.running;
+    }
+
+    public boolean getTimeCondition(){
+        switch (timeCondition){
+            case stop:
+                return false;
+            default: return true;
+        }
+    }
+
+    public void setTimeCondition(TimeCondition timeCondition){
+        this.timeCondition = timeCondition;
     }
 
     @Override
@@ -21,6 +34,7 @@ public class TimeCD extends CountDownTimer {
 
     @Override
     public void onFinish() {
-
+        timeCondition = TimeCondition.stop;
     }
+
 }
