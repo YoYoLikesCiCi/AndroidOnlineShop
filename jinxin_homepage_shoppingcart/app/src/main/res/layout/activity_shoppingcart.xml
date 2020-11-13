@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shoppingcartActivity">
+
+    <RelativeLayout
+        android:id="@+id/cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_user"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/text_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user"
+            android:layout_alignBottom="@id/user"
+            android:layout_centerInParent="true"
+            android:text="@string/message4"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/button_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/user"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="80dp"
+        android:scrollbars="none"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+       android:layout_above="@id/rg_main"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/cart_check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/all"
+            android:text="全选"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/cart_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cart_check_all"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="合计：￥00.00"/>
+
+        <TextView
+            android:id="@+id/cart_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/colorAccent"
+            android:drawableRight="@drawable/to_right"
+            android:textSize="20dp"
+            android:text="去结算"/>
+
+    </RelativeLayout>
+
+
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_bottom_parent_bg"
+        android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rb_home"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/home_button_text_selector"
+        android:text="@string/message1"
+        android:textColor="#00BCD4"
+        />
+
+    <RadioButton
+        android:id="@+id/rb_type"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/type_button_text_selector"
+        android:text="@string/message2"
+        android:textColor="#00BCD4"
+        />
+
+    <RadioButton
+        android:id="@+id/rb_community"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/community_button_text_selector"
+        android:text="@string/message3"
+        android:textColor="#00BCD4"
+        />
+
+    <RadioButton
+        android:id="@+id/rb_cart"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/cart_button_text_selector"
+        android:text="@string/message4"
+        android:textColor="#00BCD4"
+        />
+
+    <RadioButton
+        android:id="@+id/rb_user"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/user_button_text_selector"
+        android:text="@string/message5"
+        android:textColor="#00BCD4"
+        android:textColorHighlight="#FF9800"
+        />
+    </RadioGroup>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_homepage"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="首页"/>
+
+    <item
+        android:id="@+id/navigation_labelbook"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="分类" />
+
+    <item
+        android:id="@+id/navigation_specialfunctions"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="大爆炸"/>
+
+    <item
+        android:id="@+id/navigation_shoppingcart"
+        android:icon="@drawable/abc_vector_test"
+        android:title="购物车"
+        />
+
+    <item
+        android:id="@+id/navigation_personprofile"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="我的"
+        />
+
+
+
+
+
+</menu>

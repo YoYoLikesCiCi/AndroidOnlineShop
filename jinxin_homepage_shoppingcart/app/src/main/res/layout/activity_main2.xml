@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,96 +7,122 @@
     android:orientation="vertical"
     tools:context=".MainActivity2">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/ly_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
         <ImageView
+            android:id="@+id/im_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/search"/>
+            android:src="@drawable/search"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@id/edit_text"/>
 
         <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/find"
-            />
-        <Button
+            android:id="@+id/edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="@string/find"
+            android:layout_toLeftOf="@id/button1"
+            android:layout_toRightOf="@+id/im_search"
+            />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
             android:text="@string/find"/>
-    </LinearLayout>
+    </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="wrap_content">
+
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ly_search"
+            android:layout_above="@+id/rg_main"
+           >
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+             >
 
                 <ImageView
                     android:id="@+id/image_view_phone"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/phone" />
+                    android:src="@drawable/phone"
+                    />
 
                 <TextView
                     android:id="@+id/text_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/phone_5G"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_below="@id/image_view_phone"/>
 
                 <ImageView
                     android:id="@+id/image_view_milk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/milk" />
+                    android:src="@drawable/milk"
+                    android:layout_below="@id/text_phone"/>
 
                 <TextView
                     android:id="@+id/text_milk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/milk"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_below="@id/image_view_milk"/>
 
                 <ImageView
                     android:id="@+id/image_view_AmTravel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/the_america_travel" />
+                    android:src="@drawable/the_america_travel"
+                    android:layout_below="@id/text_milk"/>
 
                 <TextView
                     android:id="@+id/text_AmTravel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/AmericaTravel"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_below="@id/image_view_AmTravel"/>
 
                 <ImageView
                     android:id="@+id/image_view_xiao_long_xia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/xiao_long_xia" />
+                    android:src="@drawable/xiao_long_xia"
+                    android:layout_alignTop="@id/image_view_phone"
+                    android:layout_alignBottom="@id/image_view_phone"
+                    android:layout_alignParentRight="true"/>
 
                 <TextView
                     android:id="@+id/text_xiao_long_xia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/xiao_long_xia"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_below="@+id/image_view_xiao_long_xia"
+                    android:layout_alignLeft="@id/image_view_xiao_long_xia"/>
 
                 <ImageView
                     android:id="@+id/image_view_charger"
-                    android:layout_width="102dp"
-                    android:layout_height="89dp"
+                    android:layout_width="100dp"
+                    android:layout_height="94dp"
+                    android:layout_alignBottom="@id/image_view_phone"
+                    android:layout_alignTop="@id/image_view_phone"
+                    android:layout_centerHorizontal="true"
+
+
                     android:src="@drawable/charger" />
 
                 <TextView
@@ -104,38 +130,57 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/charger"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
 
-                <ImageView
-                    android:id="@+id/jj"
-                    android:layout_width="102dp"
-                    android:layout_height="89dp"
-                    android:src="@drawable/charger" />
+                    android:layout_below="@id/image_view_charger"
+                    android:layout_toLeftOf="@id/text_xiao_long_xia"
+                    android:layout_toRightOf="@id/text_phone"/>
 
                 <TextView
-                    android:id="@+id/ww"
+                    android:id="@+id/price_charger"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/charger"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/jk"
-                    android:layout_width="102dp"
-                    android:layout_height="89dp"
-                    android:src="@drawable/charger" />
-
-                <TextView
-                    android:id="@+id/tt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/charger"
-                    android:textSize="20sp" />
+                    android:layout_alignLeft="@+id/image_view_charger"
+                    android:layout_alignBottom="@+id/image_view_charger"
+                    android:text="48"
+                    android:textSize="20dp"
+                    android:background="@color/colorPrimary"></TextView>
 
 
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/charger1"-->
+<!--                    android:layout_width="102dp"-->
+<!--                    android:layout_height="89dp"-->
+<!--                    android:src="@drawable/charger"-->
+<!--                    android:layout_below="@id/text_charger"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_charger1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/charger"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_below="@id/charger1"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/charger2"-->
+<!--                    android:layout_width="102dp"-->
+<!--                    android:layout_height="89dp"-->
+<!--                    android:src="@drawable/charger"-->
+<!--                    android:layout_below="@id/text_charger1"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tt"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/charger"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_below="@id/charger2"/>-->
+
+
+            </RelativeLayout>
         </ScrollView>
-    </LinearLayout>
+
 <!--        <FrameLayout-->
 <!--            android:id="@+id/frame1"-->
 <!--            android:layout_width="match_parent"-->
@@ -143,15 +188,13 @@
 <!--            android:layout_weight="1">-->
 
 <!--        </FrameLayout>-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
             <RadioGroup
                 android:id="@+id/rg_main"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
                 android:background="@drawable/home_bottom_parent_bg">
 
                 <RadioButton
@@ -197,6 +240,5 @@
 
             </RadioGroup>
 
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
 
