@@ -16,10 +16,12 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        //隐藏标题栏
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
             actionBar.hide();
         }
+        //计时销毁
         TimeCD timer = new TimeCD(endtime,1000){
             @Override
             public void onFinish() {
