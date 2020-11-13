@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@id/navigation_personprofile"
-        android:name="com.example.onlineshop_v2.ui.personprofile.PersonProfile"
+        android:name="com.example.onlineshop_v2.ui.personprofile.PersonProfileFragment"
         android:label="PersonProfile"
         tools:layout="@layout/fragment_person_profile" />
 

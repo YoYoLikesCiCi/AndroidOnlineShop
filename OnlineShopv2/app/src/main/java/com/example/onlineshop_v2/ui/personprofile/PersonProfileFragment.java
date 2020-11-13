@@ -14,12 +14,12 @@ import android.view.ViewGroup;
 
 import com.example.onlineshop_v2.R;
 
-public class PersonProfile extends Fragment {
+public class PersonProfileFragment extends Fragment {
 
     private PersonProfileViewModel mViewModel;
 
-    public static PersonProfile newInstance() {
-        return new PersonProfile();
+    public static PersonProfileFragment newInstance() {
+        return new PersonProfileFragment();
     }
 
     @Override
