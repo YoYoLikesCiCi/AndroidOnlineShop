@@ -88,8 +88,6 @@
                 android:layout_alignBottom="@id/image_view_phone"
                 android:layout_alignTop="@id/image_view_phone"
                 android:layout_centerHorizontal="true"
-
-
                 android:src="@drawable/homepage_xiao_long_xia" />
 
             <TextView
