@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import com.example.onlineshop_v2.R;
 import com.example.onlineshop_v2.ui.ConnectToServer;
+import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 
@@ -45,9 +46,11 @@ public class SpecialFunctions extends Fragment {
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                JSONObject jsonObject = new JSONObject();
+                JSONObject jsonObjectSend = new JSONObject();
+                JSONObject jsonObjectReceive = new JSONObject();
                 ConnectToServer connectToServer = new ConnectToServer();
-                connectToServer.sendRequestWithHttpURLConnection(jsonObject,"jfal");
+                connectToServer.sendRequestWithHttpURLConnection(jsonObjectSend,"jfal");
+                jsonObjectReceive = connectToServer.jsonObject1;
             }
         });
     }

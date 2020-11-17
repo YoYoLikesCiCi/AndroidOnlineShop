@@ -2,6 +2,8 @@ package com.example.onlineshop_v2.ui;
 
 import android.util.Log;
 
+import com.google.gson.JsonObject;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,8 +21,10 @@ import okhttp3.Response;
 
 
 public class ConnectToServer {
+
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
+    public JSONObject jsonObject1 = new JSONObject();
     public void sendRequestWithHttpURLConnection(JSONObject jsonObject, String url){
         //开启线程来发起网络请求
         new Thread(new Runnable() {
@@ -56,6 +60,7 @@ public class ConnectToServer {
 
 
                     System.out.println(Jobject);
+                    jsonObject1 = Jobject;
 //                    Log.d(TAG, "run: "+ decode);
 //                    showResponse(responseData);
                 } catch (IOException | JSONException e) {
