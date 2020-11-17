@@ -10,5 +10,7 @@ public class PersonInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_info);
+        setTitle("个人信息");//设置标题
+
     }
 }
