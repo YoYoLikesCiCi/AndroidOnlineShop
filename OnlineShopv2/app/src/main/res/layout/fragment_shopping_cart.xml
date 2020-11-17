@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.shoppingcart.ShoppingCartFragment">
+
+    //顶栏，可删除购物车内内容
+    <RelativeLayout
+        android:id="@+id/cart"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shoppingcart_main_user"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/text_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user"
+            android:layout_alignBottom="@id/user"
+            android:layout_centerInParent="true"
+            android:text="message4"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/button_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/user"/>
+    </RelativeLayout>
+
+    //购物车内的内容列表
+    <ListView
+        android:id="@+id/cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="80dp"
+        android:scrollbars="none"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@id/nav_view"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/cart_check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/shoppingcart_all"
+            android:text="全选"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/cart_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cart_check_all"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="合计：￥00.00"/>
+
+        <TextView
+            android:id="@+id/cart_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/colorAccent"
+            android:drawableRight="@drawable/shoppingcart_to_right"
+            android:textSize="20dp"
+            android:text="去结算"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

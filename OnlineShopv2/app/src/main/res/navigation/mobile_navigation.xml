@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_homepage">
+
+    <fragment
+        android:id="@+id/navigation_homepage"
+        android:name="com.example.onlineshop_v2.ui.homepage.HomePageFragment"
+        android:label="homePage"
+        tools:layout="@layout/fragment_home_page"/>
+
+       <fragment
+        android:id="@+id/navigation_labelbook"
+        android:name="com.example.onlineshop_v2.ui.labelbook.LabelBookFragment"
+        android:label="LabelBook"
+        tools:layout="@layout/fragment_label_book" />
+
+    <fragment
+        android:id="@+id/navigation_specialfunctions"
+        android:name="com.example.onlineshop_v2.ui.specialfunctions.SpecialFunctions"
+        tools:layout="@layout/fragment_special_functions"
+        android:label="SpecialFunctions"/>
+
+    <fragment
+        android:id="@+id/navigation_shoppingcart"
+        android:name="com.example.onlineshop_v2.ui.shoppingcart.ShoppingCartFragment"
+        android:label="Shoppingcart"
+        tools:layout="@layout/fragment_shopping_cart"/>
+
+    <fragment
+        android:id="@id/navigation_personprofile"
+        android:name="com.example.onlineshop_v2.ui.personprofile.PersonProfileFragment"
+        android:label="PersonProfile"
+        tools:layout="@layout/fragment_person_profile" />
+
+
+</navigation>
