@@ -6,19 +6,20 @@
     android:orientation="vertical"
     tools:context=".ui.specialfunctions.SpecialFunctions">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello,this is a test page" />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello,this is a test page" />-->
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/test_button"
-        android:text="test go " />
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/test_button"-->
+<!--        android:text="test go " />-->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/re_view"
+        android:id="@+id/special_functions_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </LinearLayout>
