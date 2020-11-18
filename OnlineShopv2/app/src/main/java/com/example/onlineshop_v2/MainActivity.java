@@ -1,6 +1,7 @@
 package com.example.onlineshop_v2;
 
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.bumptech.glide.Glide;
 import com.example.onlineshop_v2.ui.ConnectToServer;
@@ -15,6 +16,7 @@ import androidx.navigation.ui.NavigationUI;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 }

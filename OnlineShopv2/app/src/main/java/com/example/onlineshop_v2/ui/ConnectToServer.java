@@ -1,5 +1,7 @@
 package com.example.onlineshop_v2.ui;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 
 import com.google.gson.JsonObject;
@@ -20,61 +22,72 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 
-public class ConnectToServer {
+public class ConnectToServer extends Thread {
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
-    public JSONObject TempJsonObject = new JSONObject();
-    public void sendRequestWithHttpURLConnection(JSONObject sentJsonObject, String keyword){
+    public JSONObject TempJsonObject = new JSONObject(); //返回数据存储区
 
-        final String url = "http://47.93.25.50/"+keyword;
+    private String keyword = "";  //服务关键词
+    //获取成功massage
+    private int SUCCESS_MSG = 1;
+    //获取失败返回massage
+    private int FAILURE_MSG = 0;
+
+
+    private Handler handlerConnectToServer ; //UI线程传递的参数用于向UI线程传递消息和数据
+
+
+    private String url = "http://47.93.25.50/";
+    public ConnectToServer (Handler mHandler, JSONObject sentJsonObject, String keyword){
+
+        this.handlerConnectToServer = mHandler;
+        this.TempJsonObject = sentJsonObject;
+        this.keyword = keyword;
+        this.url = this.url + this.keyword;
         System.out.println(url);
-        //开启线程来发起网络请求
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
+    }
 
-                    //后面让他等于传入的jsonObject
-                    JSONObject jsonObject = new JSONObject();
-                    jsonObject.put("name","孙起");
-                    jsonObject.put("password","123445");
+    @Override
+    public void run(){
+        try {
+//            Looper.prepare();
+            //后面让他等于传入的jsonObject
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("name","孙起");
+            jsonObject.put("password","123445");
 
-                    String json = jsonObject.toString();
-                    OkHttpClient client = new OkHttpClient();
+            String json = jsonObject.toString();
+            OkHttpClient client = new OkHttpClient();
 
-                    RequestBody requestBody = RequestBody.create(JSON,json);
+            RequestBody requestBody = RequestBody.create(JSON,json);
 
-                    System.out.println("tostring" + requestBody.toString());
+            System.out.println("tostring" + requestBody.toString());
 //                    Log.d(TAG, "tostring"+requestBody.toString());
-                    Request request = new Request.Builder()
-                            .url(url)
-                            .post(requestBody)
-                            .build();
-                    Response response = client.newCall(request).execute();
-                    String responseData = response.body().string();
-                    JSONObject Jobject = new JSONObject(responseData);
-//                    System.out.println(Jobject);
-//                    String decode = decodeUnicode(responseData);
-//                    System.out.println("type of response:"+getType(response));
-//                    System.out.println(response.toString());
-//                    System.out.println("type of responseData:"+getType(responseData));
-//                    System.out.println(responseData.toCharArray());
-//                    System.out.println("type of decode:"+getType(decode));
+            Request request = new Request.Builder()
+                    .url(url)
+                    .post(requestBody)
+                    .build();
+            Response response = client.newCall(request).execute();
+            String responseData = response.body().string();
+            System.out.println(responseData);
+            JSONObject receiveJsonData = new JSONObject(responseData);
+            System.out.println(" 打印 connect 内receive");
+            System.out.println(receiveJsonData);
 
-
-//                    System.out.println(Jobject);
-                    TempJsonObject = Jobject;
+            TempJsonObject = receiveJsonData;
+//            Looper.loop();
+            handlerConnectToServer.obtainMessage(SUCCESS_MSG,receiveJsonData).sendToTarget();
+//            Looper.myLooper().quit();
+            System.out.println(" 转换成功");
 //                    Log.d(TAG, "run: "+ decode);
 //                    showResponse(responseData);
-                } catch (IOException | JSONException e) {
-                    e.printStackTrace();
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
 //                    Log.d(TAG, "run: error");
-                    System.out.println("run error");
-                }
+            System.out.println("run error");
+        }
 
-            }
-        }).start();
     }
 
 //    private void showResponse(final String response){
