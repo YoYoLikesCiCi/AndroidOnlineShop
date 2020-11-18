@@ -11,8 +11,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.onlineshop_v2.R;
+import com.example.onlineshop_v2.ui.ConnectToServer;
+
+import org.json.JSONObject;
 
 public class PersonProfileFragment extends Fragment {
 
@@ -33,6 +37,18 @@ public class PersonProfileFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(PersonProfileViewModel.class);
         // TODO: Use the ViewModel
+        Button testButton  = (Button)getActivity().findViewById(R.id.test_button);
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConnectToServer connectToServer = new ConnectToServer();
+                JSONObject jsonObject = new JSONObject();
+                connectToServer.sendRequestWithHttpURLConnection(jsonObject,"getbookdata");
+//        jsonObject = connectToServer.TempJsonObject;
+//        System.out.println(jsonObject);
+            }
+        });
+
     }
 
 }

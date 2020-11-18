@@ -24,14 +24,18 @@ public class ConnectToServer {
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
-    public JSONObject jsonObject1 = new JSONObject();
-    public void sendRequestWithHttpURLConnection(JSONObject jsonObject, String url){
+    public JSONObject TempJsonObject = new JSONObject();
+    public void sendRequestWithHttpURLConnection(JSONObject sentJsonObject, String keyword){
+
+        final String url = "http://47.93.25.50/"+keyword;
+        System.out.println(url);
         //开启线程来发起网络请求
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
 
+                    //后面让他等于传入的jsonObject
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.put("name","孙起");
                     jsonObject.put("password","123445");
@@ -44,7 +48,7 @@ public class ConnectToServer {
                     System.out.println("tostring" + requestBody.toString());
 //                    Log.d(TAG, "tostring"+requestBody.toString());
                     Request request = new Request.Builder()
-                            .url("http://47.93.25.50/getbookdata")
+                            .url(url)
                             .post(requestBody)
                             .build();
                     Response response = client.newCall(request).execute();
@@ -59,8 +63,8 @@ public class ConnectToServer {
 //                    System.out.println("type of decode:"+getType(decode));
 
 
-                    System.out.println(Jobject);
-                    jsonObject1 = Jobject;
+//                    System.out.println(Jobject);
+                    TempJsonObject = Jobject;
 //                    Log.d(TAG, "run: "+ decode);
 //                    showResponse(responseData);
                 } catch (IOException | JSONException e) {
@@ -99,12 +103,6 @@ public class ConnectToServer {
 //            e.printStackTrace();
 //        }
 //    }
-    //解构，纯手写，我要吐了
-    public static void decodeData(String theString){
-        int left = 0;
-        int right = 0;
-
-    }
 
 
     //转换接收过来的json数据编码， unicode -> utf-8
@@ -175,8 +173,8 @@ public class ConnectToServer {
     }
 
     //获取数据类型
-    public static String getType(Object o) {
-        return o.getClass().getName();
-    }
+//    public static String getType(Object o) {
+//        return o.getClass().getName();
+//    }
 
 }

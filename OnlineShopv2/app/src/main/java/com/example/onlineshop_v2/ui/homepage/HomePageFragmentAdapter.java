@@ -1,27 +1,26 @@
-package com.example.onlineshop_v2.ui.specialfunctions;
-
+package com.example.onlineshop_v2.ui.homepage;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.onlineshop_v2.R;
+import com.example.onlineshop_v2.ui.ConnectToServer;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-
-public class SpecialFunctionsAdapter extends RecyclerView.Adapter<SpecialFunctionsAdapter.myViewHodler> {
+public class HomePageFragmentAdapter extends RecyclerView.Adapter<HomePageFragmentAdapter.myViewHodler> {
 
     private Context context;
-    private ArrayList<GoodsEntity2> goodsEntityList;
+    private ArrayList<GoodsEntity> goodsEntityList;
 
     //构建 构造函数
-    public SpecialFunctionsAdapter(Context context, ArrayList<GoodsEntity2> goodsEntityList){
+    public HomePageFragmentAdapter(Context context, ArrayList<GoodsEntity> goodsEntityList){
         this.context = context;
         this.goodsEntityList = goodsEntityList;
     }
@@ -29,13 +28,17 @@ public class SpecialFunctionsAdapter extends RecyclerView.Adapter<SpecialFunctio
     @Override
     public myViewHodler onCreateViewHolder(ViewGroup parent, int viewType){
         //建立自定义布局
-        View itemView = View.inflate(context, R.layout.special_functions_item,null);
+        View itemView = View.inflate(context, R.layout.homepage_fragment_item,null);
+
         return new myViewHodler(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myViewHodler holder, int position) {
-        GoodsEntity2 data = goodsEntityList.get(position);
+
+
+
+        GoodsEntity data = goodsEntityList.get(position);
 
         holder.mItemGoodsName.setText(data.goodsName);
         holder.mItemGoodsPrice.setText(data.goodPrice);
@@ -53,9 +56,9 @@ public class SpecialFunctionsAdapter extends RecyclerView.Adapter<SpecialFunctio
 
         public myViewHodler(View itemView){
             super(itemView);
-            mItemGoodsImg = (ImageView)itemView.findViewById(R.id.item_goods_img);
-            mItemGoodsName = (TextView) itemView.findViewById(R.id.item_goods_name);
-            mItemGoodsPrice = (TextView) itemView.findViewById(R.id.item_goods_price);
+            mItemGoodsImg = (ImageView)itemView.findViewById(R.id.item_book_img);
+            mItemGoodsName = (TextView) itemView.findViewById(R.id.item_book_title);
+            mItemGoodsPrice = (TextView) itemView.findViewById(R.id.item_book_price);
 
             //点选事件
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +72,7 @@ public class SpecialFunctionsAdapter extends RecyclerView.Adapter<SpecialFunctio
 
     //设置item的监听事件
     public interface OnItemCilckListener{
-        public void OnItemClick(View view , GoodsEntity2 data);
+        public void OnItemClick(View view , GoodsEntity data);
     }
     //需要外部訪問，所以需要設定set方法，方便呼叫
     private OnItemCilckListener onItemCilckListener;

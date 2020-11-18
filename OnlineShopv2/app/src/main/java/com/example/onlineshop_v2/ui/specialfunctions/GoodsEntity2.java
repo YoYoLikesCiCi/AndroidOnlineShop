@@ -6,16 +6,16 @@ import android.graphics.BitmapFactory;
 import java.io.Serializable;
 import java.net.URL;
 
-public class GoodsEntity  implements Serializable {
+public class GoodsEntity2 implements Serializable {
     public String imgPath;
     public String goodsName;
     public String goodPrice;
 
-    public GoodsEntity(){
+    public GoodsEntity2(){
 
     }
 
-    public GoodsEntity(String imgPath, String goodName, String goodPrice){
+    public GoodsEntity2(String imgPath, String goodName, String goodPrice){
         this.imgPath = imgPath;
         this.goodsName = goodsName;
         this.goodPrice = goodPrice;
