@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+<<<<<<< HEAD
     android:layout_margin="8dp"
     android:background="@android:color/darker_gray"
     android:orientation="vertical">
@@ -20,6 +21,66 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         tools:text="内容" />
+=======
+    android:layout_margin="1dp"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <com.example.onlineshop_v2.ui.MyImageView
+        android:id="@+id/item_book_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="3dp"
+        android:layout_weight="100"
+        android:background="@color/white"
+        android:adjustViewBounds="true"
+         />
+    <TextView
+        android:layout_weight="10"
+        android:id="@+id/item_book_price"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="2888"
+        android:textColor="@color/colorRed"
+        />
+    <TextView
+        android:id="@+id/item_book_title"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:text="手机"
+        android:textColor="@color/colorBlack"
+        android:maxLines="1"
+        />
+
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="100dp"-->
+<!--    android:layout_margin="8dp"-->
+<!--    android:background="@android:color/darker_gray"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <com.example.onlineshop_v2.ui.MyImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/item_book_img" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/item_book_title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="8dp"-->
+<!--        tools:text="1" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/item_book_price"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="8dp"-->
+<!--        tools:text="内容" />-->
+
+>>>>>>> 10db522 (homepage 一级界面最终完成)
 
     <ImageView
         android:layout_width="wrap_content"
