@@ -21,7 +21,7 @@ public class GoodsEntity implements Serializable {
         return imgPath;
     }
 
-    public void setImgPath(String imaPath){
+    public void setImgPath(String imgPath){
         this.imgPath = imgPath;
     }
 

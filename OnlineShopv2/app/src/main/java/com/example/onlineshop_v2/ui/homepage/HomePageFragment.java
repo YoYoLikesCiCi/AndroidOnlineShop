@@ -92,6 +92,7 @@ public class HomePageFragment extends Fragment{
             GoodsEntity goodsEntity = new GoodsEntity();
             goodsEntity.setGoodsName(book.getString("Btitle"));
             goodsEntity.setGoodPrice(book.getString("Bprice"));
+            goodsEntity.setImgPath(book.getString("BISBN"));
             Log.d(TAG, "initData: "+book.getString("Bprice"));
 //            String url = "http://47.93.25.50/static/9787020015092.jpg";
 //            URL req = new URL(url);
