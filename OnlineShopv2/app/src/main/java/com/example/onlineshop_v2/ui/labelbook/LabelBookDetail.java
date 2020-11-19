@@ -2,8 +2,11 @@ package com.example.onlineshop_v2.ui.labelbook;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -12,6 +15,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.onlineshop_v2.R;
+import com.example.onlineshop_v2.ui.shoppingcart.ShoppingCartFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class LabelBookDetail extends AppCompatActivity {
@@ -45,6 +49,25 @@ public class LabelBookDetail extends AppCompatActivity {
         bookauthor.setText(intent.getStringExtra("book_author"));
         bookpublisher.setText(intent.getStringExtra("book_publisher"));
         bookintroduction.setText(intent.getStringExtra("book_introduction"));
+
+        //按钮加入购物车
+//        Button button_add = (Button) findViewById(R.id.add);
+//        button_add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent addcart = new Intent(LabelBookDetail.this,ShoppingCartFragment.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putInt("imageid",R.drawable.label_book_bainiangudu);
+//                bundle.putString("name",intent.getStringExtra("book_name"));
+//                bundle.putString("price",intent.getStringExtra("book_price"));
+//                addcart.putExtras(bundle);
+//                startActivity(addcart);
+//
+//                Toast.makeText(LabelBookDetail.this, "已加入购物车", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
     }
 
 }

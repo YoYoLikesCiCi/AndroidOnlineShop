@@ -72,6 +72,9 @@ public class LabelBookFragment extends Fragment {
 
 
 
+
+
+
         //        按钮 小说 的监听事件 （初始化数据并用适配器格式化，最后加载进布局）
         Button rb_novel = (Button) getActivity().findViewById (R.id.button_novel);
         rb_novel.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +90,7 @@ public class LabelBookFragment extends Fragment {
                 recyclerView.setAdapter(adapter);
             }
         });
+        rb_novel.performClick();
 
 
 
@@ -396,6 +400,20 @@ public class LabelBookFragment extends Fragment {
                     "这是青年文摘这是青年文摘这是青年文摘这是青年文摘这是青年文摘这是青年文摘这是青年文摘","16");
             bookList.add(book2);
         }
+    }
+
+
+    private void iniBooks(int type){
+        bookList.clear();
+        switch(type) {
+            case 1:         //小说的数据初始化
+                for(int i =0;i < 18;i++) {
+                    Book book1 = new Book("读者文摘", R.drawable.label_book_magazine_duzhewenzhai, "28",
+                            "读者们", "novel", "文学出版社", "这是读者文摘", "15");
+                }
+
+        }
+
     }
 
 }

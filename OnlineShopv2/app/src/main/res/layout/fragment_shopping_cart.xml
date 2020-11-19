@@ -55,13 +55,12 @@
         android:layout_above="@id/nav_view"
         android:background="@color/colorWhite">
 
-        <TextView
+        <Button
             android:id="@+id/cart_check_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:drawableLeft="@drawable/shoppingcart_all"
             android:text="全选"
             android:textSize="20dp"/>
 
@@ -76,7 +75,7 @@
             android:textStyle="bold"
             android:text="合计：￥00.00"/>
 
-        <TextView
+        <Button
             android:id="@+id/cart_buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,7 +87,6 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:textColor="@color/colorAccent"
-            android:drawableRight="@drawable/shoppingcart_to_right"
             android:textSize="20dp"
             android:text="去结算"/>
 
