@@ -3,26 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-<<<<<<< HEAD
     android:layout_margin="8dp"
-    android:background="@android:color/darker_gray"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/item_book_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        tools:text="1" />
-
-    <TextView
-        android:id="@+id/item_book_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        tools:text="内容" />
-=======
-    android:layout_margin="1dp"
     android:background="@android:color/darker_gray"
     android:orientation="vertical">
 
@@ -80,11 +61,3 @@
 <!--        android:layout_margin="8dp"-->
 <!--        tools:text="内容" />-->
 
->>>>>>> 10db522 (homepage 一级界面最终完成)
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/item_book_img" />
-
-</LinearLayout>

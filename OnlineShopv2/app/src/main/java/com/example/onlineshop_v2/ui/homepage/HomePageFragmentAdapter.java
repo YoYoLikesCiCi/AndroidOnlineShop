@@ -8,11 +8,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-<<<<<<< HEAD
-=======
+
 
 import com.bumptech.glide.load.engine.Resource;
->>>>>>> 10db522 (homepage 一级界面最终完成)
+import com.bumptech.glide.load.engine.Resource;
+
 import com.example.onlineshop_v2.R;
 import com.example.onlineshop_v2.ui.ConnectToServer;
 
@@ -24,10 +24,7 @@ public class HomePageFragmentAdapter extends RecyclerView.Adapter<HomePageFragme
 
     private Context context;
     private ArrayList<GoodsEntity> goodsEntityList;
-<<<<<<< HEAD
-=======
     String url = "http://47.93.25.50/static/";
->>>>>>> 10db522 (homepage 一级界面最终完成)
 
     //构建 构造函数
     public HomePageFragmentAdapter(Context context, ArrayList<GoodsEntity> goodsEntityList){
@@ -47,23 +44,22 @@ public class HomePageFragmentAdapter extends RecyclerView.Adapter<HomePageFragme
     public void onBindViewHolder(@NonNull myViewHodler holder, int position) {
 
 
-
         GoodsEntity data = goodsEntityList.get(position);
         url = "http://47.93.25.50/static/";
         holder.mItemGoodsName.setText(data.goodsName);
-<<<<<<< HEAD
+
         holder.mItemGoodsPrice.setText(data.goodPrice);
-=======
-        holder.mItemGoodsPrice.setText("¥  "+data.goodPrice);
+
+        holder.mItemGoodsPrice.setText("¥  " + data.goodPrice);
         System.out.println(data.imgPath);
-        url = url + data.imgPath+".jpg";
+        url = url + data.imgPath + ".jpg";
 
 
         holder.mItemGoodsImg.setImageURL(url);
 
->>>>>>> 10db522 (homepage 一级界面最终完成)
-    }
 
+        holder.mItemGoodsPrice.setText(data.goodPrice);
+    }
     @Override
     public int getItemCount(){
         return goodsEntityList.size();
