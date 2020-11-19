@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="5dp" >
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Uname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColorHint="@color/black"
+            android:hint="姓名" />
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Uname_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="无名猎人" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="5dp" >
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Ucontact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColorHint="@color/black"
+            android:hint="联系方式" />
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Ucontact_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="88888888888" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="8dp" >
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Uage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColorHint="@color/black"
+            android:hint="年龄" />
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Uage_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="与天同寿" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="8dp" >
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Usex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColorHint="@color/black"
+            android:hint="性别" />
+
+        <TextView
+            android:id="@+id/txt_actPersonInfo_Usex_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="无" />
+
+    </LinearLayout>
+
+</LinearLayout>
